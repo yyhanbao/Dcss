@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CSS 盒模型</title>
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>CSS 盒模型</h1>
+
+    <hr />
+
+    <h2>基本概念</h2>
+
+    <hr />
+
+    <div>
+        <p>盒模型又称框模型（Box Model）,包含了内容（content）、内边距（padding）、边框（border）、外边距（margin）4个要素。</p>
+        <p>如图：</p>
+        <img width="400" src="images/box-model.jpg" alt="盒模型图片" />
+    </div>  
+
+    <h2>两种盒模型的区别</h2>
+
+    <hr />
+
+    <div>
+        <h3>两种盒模型分别是</h3>
+        <div>
+            <ul>
+                <li>content-box 内容盒，内容是盒子的边界</li>
+                <li>border-box 边框盒，边框是盒子的边界</li>
+            </ul>
+    
+            <p>可以通过设置 box-sizing 属性来设置盒模型类型</p>
+        </div>           
+        <h3>宽度计算方式不同</h3>    
+        <div>
+            <ul>
+                <li>content-box width = 内容宽度</li>
+                <img width="400" src="images/content-box.jpg" alt="内容盒图片" />
+                <li>border-box width = 内容宽度 + padding + border</li>
+                <img width="400" src="images/border-box.jpg" alt="边框盒图片" />
+            </ul>       
+            <img src="images/different.jpg" alt="二者区别图片" />
+        </div>
+    </div>
+
+    <h2>拓展：外边距重叠</h2>
+
+    <hr />
+
+    <div>
+        <h3>哪些情况重叠</h3>
+
+        <ul>
+            <li>父子 margin 合并</li>
+            <li>兄弟 margin 合并</li>
+        </ul>
+    
+        <h3>如何阻止重叠</h3>
+    
+        <ul>
+            <li>父子合并用 padding / border 挡住</li>
+            <li>父子合并用 overflow: hidden 挡住</li>
+            <li>兄弟合并可以用 display:inline-block 消除</li>
+        </ul>
+    </div>
+
+    <h2>资料来源</h2>
+
+    <hr />
+    
+    <a href="https://xiedaimala.com/" target="_blank">饥人谷</a>
+
+</body>
+
+</html>
